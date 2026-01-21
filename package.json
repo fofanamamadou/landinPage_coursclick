@@ -1,0 +1,18 @@
+{
+    "name": "coursclick-landing",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "next": "16.0.10",
+        "react": "19.2.0",
+        "react-dom": "19.2.0",
+        "antd": "^6.0.0",
+        "@ant-design/icons": "^6.1.0",
+        "@emailjs/browser": "^4.4.1"
+    }
+}
