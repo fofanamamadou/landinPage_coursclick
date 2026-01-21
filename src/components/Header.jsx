@@ -7,8 +7,11 @@ import OfferModal from './OfferModal';
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [offerOpen, setOfferOpen] = useState(false);
+    const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
+        setIsClient(true);
+        
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 40);
         };
@@ -47,7 +50,7 @@ const Header = () => {
                 </div>
             </header>
 
-            <OfferModal open={offerOpen} onClose={() => setOfferOpen(false)} />
+            {isClient && <OfferModal open={offerOpen} onClose={() => setOfferOpen(false)} />}
         </>
     );
 };

@@ -49,14 +49,9 @@ const Features = () => {
                     subtitle="Une suite d'outils intégrés pour répondre aux exigences technologiques de l'enseignement supérieur."
                 />
 
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-                    gap: 'var(--space-md)'
-                }}>
+                <div className="features-grid">
                     {services.map((s, i) => (
-                        <div key={i} className="animate-fade-in card d-flex items-center gap-lg" style={{
-                            padding: 'var(--space-md) var(--space-lg)',
+                        <div key={i} className="animate-fade-in card feature-card d-flex items-center gap-lg" style={{
                             animationDelay: `${i * 0.03}s`
                         }}>
                             <div className="text-primary d-flex items-center justify-center" style={{
@@ -69,7 +64,7 @@ const Features = () => {
                             }}>
                                 {s.icon}
                             </div>
-                            <h4 className="text-bold" style={{ fontSize: '1.1rem', color: 'var(--text-main)', margin: 0, lineHeight: '1.4' }}>
+                            <h4 className="text-bold">
                                 {s.title}
                             </h4>
                         </div>

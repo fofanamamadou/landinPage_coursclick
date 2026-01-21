@@ -39,11 +39,11 @@ const Hero = () => {
                     </p>
 
                     <div className="d-flex justify-center gap-md flex-wrap">
-                        <a href="#solution" className="btn btn-primary" style={{ padding: '0.8rem 2rem', fontSize: '1.1rem' }}>
+                        <a href="#solution" className="btn btn-primary btn-hero-primary">
                             Initier la transformation
                             <ArrowRightOutlined />
                         </a>
-                        <a href="#features" className="btn btn-outline" style={{ padding: '0.8rem 2rem', fontSize: '1.1rem' }}>
+                        <a href="#features" className="btn btn-outline btn-hero-secondary">
                             Découvrir les bénéfices
                         </a>
                     </div>

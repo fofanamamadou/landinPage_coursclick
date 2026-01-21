@@ -8,9 +8,14 @@ import OfferModal from './OfferModal';
 const FinalCTA = () => {
     const [demoOpen, setDemoOpen] = React.useState(false);
     const [offerOpen, setOfferOpen] = React.useState(false);
+    const [isClient, setIsClient] = React.useState(false);
+
+    React.useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     return (
-        <section className="section text-center" style={{
+        <section className="section text-center final-cta-section" style={{
             background: 'var(--primary)',
             color: 'white',
             position: 'relative',
@@ -24,7 +29,7 @@ const FinalCTA = () => {
                 right: 0,
                 bottom: 0,
                 opacity: 0.05,
-                backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.8\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E")',
+                backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.8\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'%3E%3C/circle%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E")',
                 pointerEvents: 'none'
             }}></div>
 
@@ -43,17 +48,15 @@ const FinalCTA = () => {
                 </p>
                 <div className="d-flex justify-center flex-wrap gap-md">
                     <button
-                        className="btn"
+                        className="btn btn-cta-primary"
                         onClick={() => setDemoOpen(true)}
-                        style={{ background: '#FFFFFF', color: 'var(--primary)', padding: '16px 36px' }}
                     >
                         <GlobalOutlined />
                         Accéder à une démonstration
                     </button>
                     <button
-                        className="btn"
+                        className="btn btn-cta-secondary"
                         onClick={() => setOfferOpen(true)}
-                        style={{ border: '1.5px solid white', color: 'white', background: 'transparent', padding: '16px 36px' }}
                     >
                         <RocketOutlined />
                         Accéder à l'offre
@@ -61,8 +64,12 @@ const FinalCTA = () => {
                 </div>
             </div>
 
-            <DemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
-            <OfferModal open={offerOpen} onClose={() => setOfferOpen(false)} />
+            {isClient && (
+                <>
+                    <DemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
+                    <OfferModal open={offerOpen} onClose={() => setOfferOpen(false)} />
+                </>
+            )}
         </section>
     );
 };

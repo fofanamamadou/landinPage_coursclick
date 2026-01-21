@@ -366,20 +366,73 @@
   border: 1px solid #F1F5F9;
 }
 
-/* Mobile Simplification */
+/* CTA Buttons */
+.btn-cta-primary {
+    background: #FFFFFF;
+    color: var(--primary);
+}
+
+.btn-cta-primary:hover {
+    background: #F0F9FF;
+}
+
+.btn-cta-secondary {
+    border: 1.5px solid white;
+    color: white;
+    background: transparent;
+}
+
+.btn-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Simplification & Responsive Adjustments */
 @media (max-width: 768px) {
 
-  .pulse,
-  .floating,
-  .desktop-only {
-    display: none !important;
-  }
+    .pulse,
+    .floating,
+    .desktop-only {
+        display: none !important;
+    }
 
-  .section {
-    padding: var(--space-2xl) 0;
-  }
+    .section {
+        padding: var(--space-2xl) 0;
+    }
 
-  .hero-section {
-    padding: 120px 0 60px;
-  }
+    .hero-section {
+        padding: 120px 0 60px;
+    }
+
+    /* Typography adjustments for mobile */
+    .hero-title {
+        font-size: 2.125rem;
+        line-height: 1.2;
+    }
+
+    .section-title,
+    .final-cta-section h2 {
+        font-size: 1.875rem;
+        line-height: 1.25;
+    }
+
+    .hero-description {
+        font-size: 1.05rem;
+    }
+
+    /* General Button adjustments */
+    .btn {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.95rem;
+    }
+
+    /* Layout adjustments */
+    .header-container {
+        padding: 0 var(--space-sm);
+    }
+
+    .final-cta-section .d-flex {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-sm);
+    }
 }
