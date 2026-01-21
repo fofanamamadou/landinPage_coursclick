@@ -25,7 +25,7 @@ const Hero = () => {
 
             <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                 <div className="d-flex flex-column items-center justify-center text-center animate-fade-in visible" style={{ maxWidth: '900px', margin: '0 auto' }}>
-                    <p className="hero-kicker mb-sm" style={{ fontWeight: '600', letterSpacing: '0.05em' }}>
+                    <p className="hero-kicker mb-sm desktop-only" style={{ fontWeight: '600', letterSpacing: '0.05em' }}>
                         La gestion intelligente de l’assiduité au service de la réussite scolaire
                     </p>
 

@@ -66,7 +66,7 @@ const TargetAudience = () => {
 
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))',
                     gap: 'var(--space-xl)'
                 }}>
                     {segments.map((s, i) => (

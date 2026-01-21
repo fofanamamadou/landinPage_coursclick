@@ -386,53 +386,102 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
+/* Hero Buttons */
+.btn-hero-primary {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+.btn-hero-secondary {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-md);
+    justify-content: center; 
+}
+
+.feature-card {
+    padding: var(--space-md) var(--space-lg);
+}
+
+.feature-card h4 {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.4;
+}
+
 /* Mobile Simplification & Responsive Adjustments */
 @media (max-width: 768px) {
-
-    .pulse,
-    .floating,
-    .desktop-only {
+    .pulse, .floating, .desktop-only {
         display: none !important;
     }
 
     .section {
-        padding: var(--space-2xl) 0;
+        padding: var(--space-2xl) var(--space-sm); /* Add horizontal padding */
     }
 
-    .hero-section {
-        padding: 120px 0 60px;
-    }
-
-    /* Typography adjustments for mobile */
-    .hero-title {
-        font-size: 2.125rem;
-        line-height: 1.2;
-    }
-
-    .section-title,
-    .final-cta-section h2 {
-        font-size: 1.875rem;
-        line-height: 1.25;
-    }
-
-    .hero-description {
-        font-size: 1.05rem;
-    }
-
-    /* General Button adjustments */
-    .btn {
-        padding: var(--space-sm) var(--space-md);
-        font-size: 0.95rem;
-    }
-
-    /* Layout adjustments */
+    /* Header Fixes */
     .header-container {
         padding: 0 var(--space-sm);
     }
+    .header .btn {
+        padding: 0.6rem 0.9rem; /* Smaller padding */
+        font-size: 0.85rem;
+    }
+    .header .logo img {
+        height: 40px !important;
+    }
 
+    /* Hero Fixes */
+    .hero-section {
+        height: 100vh; /* Full viewport height */
+        min-height: 600px; /* Fallback for short screens */
+        padding: 0 var(--space-sm); /* Horizontal padding, vertical reset */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-description {
+        font-size: 1rem;
+    }
+    .hero-section .d-flex.flex-wrap { /* Target button container */
+        gap: var(--space-sm);
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero-section .btn {
+        width: 100%; /* Make hero buttons full-width */
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Features/Card Fixes */
+    .features-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+    .feature-card {
+        padding: var(--space-md);
+    }
+
+    /* Final CTA Fixes */
+    .final-cta-section h2 {
+        font-size: 1.75rem;
+    }
     .final-cta-section .d-flex {
         flex-direction: column;
         align-items: stretch;
         gap: var(--space-sm);
+    }
+    .final-cta-section .btn {
+        width: 100%;
     }
 }
