@@ -9,13 +9,13 @@ const { Title, Text } = Typography;
 const DemoModal = ({ open, onClose }) => {
     const [role, setRole] = useState('Administrateur');
 
-    // Video placeholders - User will provide links later
-    const videos = {
-        Administrateur: "https://www.youtube.com/embed/placeholder_admin",
-        Enseignant: "https://www.youtube.com/embed/placeholder_teacher",
-        Étudiant: "https://www.youtube.com/embed/placeholder_student",
-        Parent: "https://www.youtube.com/embed/placeholder_parent"
-    };
+    // Video placeholders
+    // const videos = {
+    //     Administrateur: "https://www.youtube.com/embed/placeholder_admin",
+    //     Enseignant: "https://www.youtube.com/embed/placeholder_teacher",
+    //     Étudiant: "https://www.youtube.com/embed/placeholder_student",
+    //     Parent: "https://www.youtube.com/embed/placeholder_parent"
+    // };
 
     return (
         <Modal
@@ -27,7 +27,7 @@ const DemoModal = ({ open, onClose }) => {
             centered
         >
             <div className="d-flex flex-column items-center">
-                <Text className="mb-md text-muted text-center">
+                {/* <Text className="mb-md text-muted text-center">
                     Sélectionnez un rôle pour voir comment CoursClick facilite votre quotidien.
                 </Text>
 
@@ -42,7 +42,7 @@ const DemoModal = ({ open, onClose }) => {
                     onChange={setRole}
                     size="large"
                     className="mb-lg"
-                />
+                /> */}
 
                 <div
                     style={{
@@ -60,8 +60,8 @@ const DemoModal = ({ open, onClose }) => {
                     <iframe
                         width="100%"
                         height="100%"
-                        src={videos[role]}
-                        title={`Démonstration pour ${role}`}
+                        src="https://player.vimeo.com/video/1162708984"
+                        title={`Démonstration de coursclick`}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
@@ -69,9 +69,9 @@ const DemoModal = ({ open, onClose }) => {
                     ></iframe>
                 </div>
 
-                <Text type="secondary" style={{ marginTop: '1rem', fontStyle: 'italic' }}>
+                {/* <Text type="secondary" style={{ marginTop: '1rem', fontStyle: 'italic' }}>
                     * Vidéo de démonstration pour le profil {role}
-                </Text>
+                </Text> */}
             </div>
         </Modal>
     );
