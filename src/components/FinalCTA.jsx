@@ -15,7 +15,7 @@ const FinalCTA = () => {
     }, []);
 
     return (
-        <section className="section text-center final-cta-section" style={{
+        <section id="finalcta" className="section text-center final-cta-section" style={{
             background: 'var(--primary)',
             color: 'white',
             position: 'relative',
